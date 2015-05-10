@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8072FEDB-6125-41EB-B69B-1D41E7846229}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SPixel</RootNamespace>
+    <AssemblyName>SPixel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>Resources\camera.ico</ApplicationIcon>
+    <StartupObject>SPixel.Program</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.0.1.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>AForge\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Controls, Version=2.0.1.0, Culture=neutral, PublicKeyToken=a8ac264d1dc6b9d9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>AForge\AForge.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging, Version=2.0.1.0, Culture=neutral, PublicKeyToken=ba8ddea9676ca48b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>AForge\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math, Version=2.0.1.0, Culture=neutral, PublicKeyToken=abba2e25397ee8c9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>AForge\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effects Forms\AdaptiveSmoothForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effects Forms\AdaptiveSmoothForm.Designer.cs">
+      <DependentUpon>AdaptiveSmoothForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adjustments Forms\BrightnessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adjustments Forms\BrightnessForm.Designer.cs">
+      <DependentUpon>BrightnessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effects Forms\CannyDetectorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effects Forms\CannyDetectorForm.Designer.cs">
+      <DependentUpon>CannyDetectorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adjustments Forms\ColorFilteringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adjustments Forms\ColorFilteringForm.Designer.cs">
+      <DependentUpon>ColorFilteringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FilterPreview.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\HuePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Adjustments Forms\ChannelFilteringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adjustments Forms\ChannelFilteringForm.Designer.cs">
+      <DependentUpon>ChannelFilteringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adjustments Forms\ContrastForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adjustments Forms\ContrastForm.Designer.cs">
+      <DependentUpon>ContrastForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adjustments Forms\EuclideanColorFilteringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adjustments Forms\EuclideanColorFilteringForm.Designer.cs">
+      <DependentUpon>EuclideanColorFilteringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adjustments Forms\GammaCorrectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adjustments Forms\GammaCorrectionForm.Designer.cs">
+      <DependentUpon>GammaCorrectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effects Forms\GaussianBlurForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effects Forms\GaussianBlurForm.Designer.cs">
+      <DependentUpon>GaussianBlurForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effects Forms\GaussianSharpenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effects Forms\GaussianSharpenForm.Designer.cs">
+      <DependentUpon>GaussianSharpenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adjustments Forms\HSLFilteringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adjustments Forms\HSLFilteringForm.Designer.cs">
+      <DependentUpon>HSLFilteringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adjustments Forms\HueModifierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adjustments Forms\HueModifierForm.Designer.cs">
+      <DependentUpon>HueModifierForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effects Forms\OilPaintingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effects Forms\OilPaintingForm.Designer.cs">
+      <DependentUpon>OilPaintingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effects Forms\PerlinNoiseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effects Forms\PerlinNoiseForm.Designer.cs">
+      <DependentUpon>PerlinNoiseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effects Forms\PixellateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effects Forms\PixellateForm.Designer.cs">
+      <DependentUpon>PixellateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adjustments Forms\SaturationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adjustments Forms\SaturationForm.Designer.cs">
+      <DependentUpon>SaturationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Image Forms\ShrinkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Image Forms\ShrinkForm.Designer.cs">
+      <DependentUpon>ShrinkForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Effects Forms\ThresholdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effects Forms\ThresholdForm.Designer.cs">
+      <DependentUpon>ThresholdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Image Forms\CustomRotationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Image Forms\CustomRotationForm.Designer.cs">
+      <DependentUpon>CustomRotationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DoubleBufferDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DoubleBufferDisplay.Designer.cs">
+      <DependentUpon>DoubleBufferDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Forms\ImageProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Forms\ImageProperties.Designer.cs">
+      <DependentUpon>ImageProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Forms\HistogramWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Forms\HistogramWindow.Designer.cs">
+      <DependentUpon>HistogramWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Forms\ImageStatisticsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Forms\ImageStatisticsWindow.Designer.cs">
+      <DependentUpon>ImageStatisticsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FilterPreview.resx">
+      <DependentUpon>FilterPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\HuePicker.resx">
+      <DependentUpon>HuePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DoubleBufferDisplay.resx">
+      <DependentUpon>DoubleBufferDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Forms\HistogramWindow.resx">
+      <DependentUpon>HistogramWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Forms\ImageStatisticsWindow.resx">
+      <DependentUpon>ImageStatisticsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Image Forms\ResizeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Image Forms\ResizeForm.Designer.cs">
+      <DependentUpon>ResizeForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AForge\AForge.Controls.dll" />
+    <Content Include="AForge\AForge.dll" />
+    <Content Include="AForge\AForge.Imaging.dll" />
+    <Content Include="AForge\AForge.Math.dll" />
+    <EmbeddedResource Include="Effects Forms\AdaptiveSmoothForm.resx">
+      <DependentUpon>AdaptiveSmoothForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adjustments Forms\BrightnessForm.resx">
+      <DependentUpon>BrightnessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effects Forms\CannyDetectorForm.resx">
+      <DependentUpon>CannyDetectorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adjustments Forms\ColorFilteringForm.resx">
+      <DependentUpon>ColorFilteringForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adjustments Forms\ChannelFilteringForm.resx">
+      <DependentUpon>ChannelFilteringForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adjustments Forms\ContrastForm.resx">
+      <DependentUpon>ContrastForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adjustments Forms\EuclideanColorFilteringForm.resx">
+      <DependentUpon>EuclideanColorFilteringForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adjustments Forms\GammaCorrectionForm.resx">
+      <DependentUpon>GammaCorrectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effects Forms\GaussianBlurForm.resx">
+      <DependentUpon>GaussianBlurForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effects Forms\GaussianSharpenForm.resx">
+      <DependentUpon>GaussianSharpenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adjustments Forms\HSLFilteringForm.resx">
+      <DependentUpon>HSLFilteringForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adjustments Forms\HueModifierForm.resx">
+      <DependentUpon>HueModifierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effects Forms\OilPaintingForm.resx">
+      <DependentUpon>OilPaintingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effects Forms\PerlinNoiseForm.resx">
+      <DependentUpon>PerlinNoiseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effects Forms\PixellateForm.resx">
+      <DependentUpon>PixellateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adjustments Forms\SaturationForm.resx">
+      <DependentUpon>SaturationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Image Forms\ShrinkForm.resx">
+      <DependentUpon>ShrinkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Effects Forms\ThresholdForm.resx">
+      <DependentUpon>ThresholdForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Image Forms\CustomRotationForm.resx">
+      <DependentUpon>CustomRotationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Image Forms\ResizeForm.resx">
+      <DependentUpon>ResizeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Forms\ImageProperties.resx">
+      <DependentUpon>ImageProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\harrow.cur" />
+    <EmbeddedResource Include="Resources\hmove.cur" />
+    <Content Include="Resources\about.png" />
+    <Content Include="Resources\arrow_left_blue.png" />
+    <Content Include="Resources\arrow_right_blue.png" />
+    <Content Include="Resources\camera.ico" />
+    <Content Include="Resources\camera_image.png" />
+    <Content Include="Resources\colorpicker.cur" />
+    <Content Include="Resources\crop.png" />
+    <Content Include="Resources\delete_clear.png" />
+    <Content Include="Resources\disk_blue.png" />
+    <Content Include="Resources\fit_to_size.png" />
+    <Content Include="Resources\image_properties.png" />
+    <Content Include="Resources\printer.png" />
+    <Content Include="Resources\rotate_left.png" />
+    <Content Include="Resources\rotate_right.png" />
+    <Content Include="Resources\undo.png" />
+    <Content Include="Resources\view_1_1.png" />
+    <Content Include="Resources\view_fullscreen.png" />
+    <Content Include="Resources\zoomin.png" />
+    <Content Include="Resources\zoomout.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
