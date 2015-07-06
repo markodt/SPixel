@@ -1,7 +1,5 @@
 # SPixel Image Editor
 
-![alt tag](https://dl.dropboxusercontent.com/u/21570423/spixel.png)
-
 ### Features
 - Convert images to grayscale, sepia tone and invert image colors
 - Zoom in and out of images
